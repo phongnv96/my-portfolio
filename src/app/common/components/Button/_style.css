@@ -1,0 +1,37 @@
+.btn {
+    display: inline-block;
+    font-family: Jost,sans-serif;
+    font-weight: 500;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+    padding: 14px 48px 13px;
+    position: relative;
+    overflow: hidden;
+}
+.btn:before {
+    position: absolute;
+    content: "";
+    z-index: 0;
+    background-color: var(--primary-color);
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    transition: all .3s ease;
+}
+.btn.fill:before {
+    height: 110%;
+}
+.btn.fill:hover:before {
+    height: 0;
+}
+.btn.outlined:before {
+    height: 0;
+}
+.btn.outlined:hover:before {
+    height: 110%;
+}
+.btn span {
+        position: relative;
+        z-index: 2;
+        transition: all .3s ease;
+}

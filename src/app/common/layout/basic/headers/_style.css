@@ -1,0 +1,16 @@
+.header-basic {
+    transition: all .3s ease;
+}
+
+body .header-basic.animate {
+    box-shadow: 0 0 10px rgba(255,255,255,.05);
+    padding: 15px 16px;
+}
+
+body.dark  .header-basic.animate {
+    background-color: #2b2d33;
+}
+
+body.light  .header-basic.animate {
+    background-color: #ffff;
+}

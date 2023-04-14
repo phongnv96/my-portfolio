@@ -1,0 +1,66 @@
+.skills {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 8px;
+
+}
+
+ .skills.illustrator {
+    background-color: #390000;
+}
+
+ .skills.photoshop {
+    background-color: #001631;
+}
+
+ .skills.figma {
+    background-color: #fff;
+}
+
+ .skills .svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px
+}
+
+.skills .svg {
+    width: 25px;
+    height: 25px;
+}
+
+ .skills.illustrator .svg {
+    color: #ff9a00
+}
+
+ .skills.photoshop .svg {
+    color: #00a9ff
+}
+
+.anim_moveBottom {
+    -webkit-animation: anim_moveBottom 3s linear 0s infinite alternate;
+    animation: anim_moveBottom 3s linear 0s infinite alternate
+}
+
+@-webkit-keyframes anim_moveBottom {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(20px)
+    }
+}
+
+@keyframes anim_moveBottom {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(20px)
+    }
+}
