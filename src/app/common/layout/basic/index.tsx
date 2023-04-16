@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+"use client"
 
-import ConfigArea from "../../components/ThemeSetting/ConfigArea";
-import Header from "./headers/Header";
-import MouseCursor from "../../components/Mouse/MouseCursor";
-import { ThemeContext } from "../../contexts/ThemeContext";
-import { ThemeContextType } from "../../types/themeConfig";
+import React, { useContext } from 'react';
+
+import MouseCursor from '../../components/Mouse/MouseCursor';
+import ConfigArea from '../../components/ThemeSetting/ConfigArea';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import { ThemeContextType } from '../../types/themeConfig';
+import Header from './headers/Header';
 
 interface Props {
   children: React.ReactNode;

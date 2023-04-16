@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+"use client"
+import React, { useContext } from 'react';
 
-import ColorItemList from "./ColorItemList";
-import { ThemeColorSelected } from "../../constants";
-import { ThemeContext } from "../../contexts/ThemeContext";
+import { ThemeColorSelected } from '../../constants';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import ColorItemList from './ColorItemList';
 
 function ConfigArea() {
   const { theme, updateColor } = useContext(ThemeContext);

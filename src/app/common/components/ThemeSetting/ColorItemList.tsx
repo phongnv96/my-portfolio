@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
-import ColorItem from "./ColorItem";
-import { ThemeColorSelected } from "../../constants";
+import { ThemeColorSelected } from '../../constants';
+import ColorItem from './ColorItem';
 
 interface ColorItemListProps {
   colors?: any[];

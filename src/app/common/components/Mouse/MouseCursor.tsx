@@ -1,6 +1,10 @@
-import "./_style.css";
+"use client"
+import './_style.css';
 
-import React, { useEffect, useRef } from "react";
+import React, {
+  useEffect,
+  useRef,
+} from 'react';
 
 export default function MouseCursor() {
   const elCursorInner = useRef<any>();

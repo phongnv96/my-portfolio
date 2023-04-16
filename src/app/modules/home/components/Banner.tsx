@@ -1,17 +1,20 @@
-import "./_style.css";
+import './_style.css';
 
-import Button from "@/app/common/components/Button";
-import Image from "next/image";
-import React from "react";
-import { Typewriter } from "@/app/common/components/TextEffect/TextTypeWriter";
+import React from 'react';
+
+import Image from 'next/image';
+
+import Button from '@/app/common/components/Button';
+import { Typewriter } from '@/app/common/components/TextEffect/TextTypeWriter';
 
 export default function Banner() {
+  // const t = useTranslations('Index');
   return (
     <div className="container w-full h-full">
       <div className="content w-full pt-[150px] lg:pt-0 lg:h-full lg:justify-between flex lg:flex-row flex-col-reverse items-center">
         <div className="details w-full lg:w-1/2">
           <div className="hello">
-            <h3 className="text-primary text-[30px]">Hello, I'm</h3>
+            <h3 className="text-primary text-[30px]">, I'm</h3>
           </div>
           <div className="name">
             <h3 className="text-[40px] lg:text-[60px] font-bold">
