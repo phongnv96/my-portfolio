@@ -7,11 +7,11 @@ import { Typewriter } from "@/app/common/components/TextEffect/TextTypeWriter";
 
 export default function Banner() {
   return (
-    <div className="container w-full h-full">
+    <div className="container w-full h-full mb-[150px]">
       <div className="content w-full pt-[150px] lg:pt-0 lg:h-full lg:justify-between flex lg:flex-row flex-col-reverse items-center">
         <div className="details w-full lg:w-1/2">
           <div className="hello">
-            <h3 className="text-primary text-[30px]">Hello, I'm</h3>
+            <h3 className="text-primary text-[30px]">Hello, I`&apos`m</h3>
           </div>
           <div className="name">
             <h3 className="text-[40px] lg:text-[60px] font-bold">
@@ -28,7 +28,7 @@ export default function Banner() {
           </div>
           <div className="text">
             <p>
-              I'm creative designer based in New York, and I'm very passionate
+              I`&apos`m creative designer based in New York, and I`&apos`m very passionate
               and dedicated to my work.
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function Banner() {
         </div>
         <div className="avatar w-1/2 lg:ml-[100px] mb-8 lg:mb-0">
           <div className="image relative">
-            <Image  width={520} height={650} src="/images/avatar.png" alt="image" className="max-h-[650px] xl:max-h[400px]" />
+            <Image  width={400} height={550} src="/images/avatar.png" alt="image" className="max-h-[650px] xl:max-h[400px]" />
             <span className="skills illustrator bg-amber-900 top-0 left-[-40px] lg:top-[20px] lg:left-[-20px] anim_moveBottom rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -3,6 +3,8 @@
 import "./globals.css";
 
 import LayoutBasic from "./common/layout/basic";
+import Loading from "./loading";
+import { Suspense } from "react";
 import ThemeProvider from "./common/contexts/ThemeContext";
 
 export default function RootLayout({
@@ -13,7 +15,9 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang="en">
-        <LayoutBasic>{children}</LayoutBasic>
+        <LayoutBasic>
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+        </LayoutBasic>
       </html>
     </ThemeProvider>
   );
