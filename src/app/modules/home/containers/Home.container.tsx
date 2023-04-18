@@ -1,16 +1,18 @@
-import About from '../components/About'
-import Banner from '../components/Banner'
-import ProcessList from '../components/Process/ProcessList'
-import React from 'react'
+import About from "../components/About";
+import AmazingWorks from "../components/AmazingWorks";
+import Banner from "../components/Banner";
+import ProcessList from "../components/Process/ProcessList";
+import React from "react";
 
 function HomeContainer() {
   return (
     <>
-        <Banner />
-        <ProcessList />
-        <About />
+      <Banner />
+      <ProcessList />
+      <About />
+      <AmazingWorks />
     </>
-  )
+  );
 }
 
-export default HomeContainer
+export default HomeContainer;

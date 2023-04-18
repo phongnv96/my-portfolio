@@ -16,13 +16,13 @@ function About() {
       <div className="grid grid-cols-2 gap-10">
         <div className="left">
           <Image
-            width={485}
-            height={480}
+            width={640}
+            height={630}
             src="/images/introduce.jpeg"
             alt="about_me"
           />
         </div>
-        <div className="right">
+        <div className="right self-center">
           <div className="title wow fadeInUp mb-6">
             <span className="text-[22px] text-primary font-bold mb-2">I m a Designer</span>
             <h3 className="text-[40px]">I Can Design Anything You Want</h3>

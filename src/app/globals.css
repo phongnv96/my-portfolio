@@ -23,3 +23,140 @@
   background-color: var(--clr-bg-light);
   color: var(--clr-text-light);
 }
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    display: flex
+}
+
+#preloader:after,#preloader:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    transition: all .3s ease 0s
+}
+
+#preloader:after {
+    left: auto;
+    right: 0
+}
+
+#preloader .loader_line {
+    margin: auto;
+    width: 1px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    transition: all .8s ease 0s
+}
+
+.loader_line:before {
+    top: 50%;
+    height: 0%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    -webkit-animation: lineheight 1s ease-in-out 0s forwards;
+    animation: lineheight 1s ease-in-out 0s forwards
+}
+
+.loader_line:after,.loader_line:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1px
+}
+
+.loader_line:after {
+    top: 0;
+    height: 100%;
+    background-color: #999;
+    transform: translateY(-100%);
+    -webkit-animation: lineround 1.2s linear 0s infinite;
+    animation: lineround 1.2s linear 0s infinite;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s
+}
+
+@-webkit-keyframes lineheight {
+    0% {
+        height: 0%
+    }
+
+    to {
+        height: 100%
+    }
+}
+
+@keyframes lineheight {
+    0% {
+        height: 0%
+    }
+
+    to {
+        height: 100%
+    }
+}
+
+@-webkit-keyframes lineround {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    to {
+        transform: translateY(200%)
+    }
+}
+
+@keyframes lineround {
+    0% {
+        transform: translateY(-100%)
+    }
+
+    to {
+        transform: translateY(200%)
+    }
+}
+
+.preloaded .loader_line:after {
+    opacity: 0
+}
+
+.preloaded .loader_line {
+    opacity: 0;
+    height: 100%!important
+}
+
+.preloaded:after,.preloaded:before {
+    -webkit-animation: preloadedzero .3s ease-in-out .5s forwards;
+    animation: preloadedzero .3s ease-in-out .5s forwards
+}
+
+@-webkit-keyframes preloadedzero {
+    0% {
+        width: 50%
+    }
+
+    to {
+        width: 0
+    }
+}
+
+@keyframes preloadedzero {
+    0% {
+        width: 50%
+    }
+
+    to {
+        width: 0
+    }
+}
