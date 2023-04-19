@@ -11,7 +11,7 @@ interface ProcessItemProps {
 function ProcessItem(props: ProcessItemProps) {
   const { title, image, description, svg } = props;
   return (
-    <div className="list_inner text-center mb-[70px]">
+    <div className="list_inner text-center mb-0 lg:mb-[70px]">
       <div className="icon relative mb-[30px]">
         <span>
           <Image
@@ -33,7 +33,7 @@ function ProcessItem(props: ProcessItemProps) {
       <div className="title mb-[20px]">
         <h3 className="text-[20px] font-bold">{title}</h3>
       </div>
-      <div className="text text-gray-500">
+      <div className="text dark:text-gray-400 text-gray-600">
         <p>{description}</p>
       </div>
     </div>

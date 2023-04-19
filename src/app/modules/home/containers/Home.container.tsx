@@ -1,8 +1,11 @@
 import About from "../components/About";
 import AmazingWorks from "../components/AmazingWorks";
-import Banner from "../components/Banner";
+import Banner from "../components/Banner/Banner";
+import ContactMe from "../components/ContactMe";
 import ProcessList from "../components/Process/ProcessList";
 import React from "react";
+import Skills from "../components/Skills";
+import TimeLine from "../components/TimeLine";
 
 function HomeContainer() {
   return (
@@ -11,6 +14,9 @@ function HomeContainer() {
       <ProcessList />
       <About />
       <AmazingWorks />
+      <Skills />
+      <TimeLine />
+      <ContactMe />
     </>
   );
 }

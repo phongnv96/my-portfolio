@@ -4,8 +4,8 @@ import React from "react";
 
 function About() {
   return (
-    <div className="relative pt-28">
-      <div className="absolute top-0 left-0">
+    <div className="relative container mx-auto pt-44 lg:pt-28 ">
+      <div className="absolute top-5 lg:top-0 left-0">
         <Image
           width={130}
           height={220}
@@ -13,7 +13,7 @@ function About() {
           src="/images/side-effect1.png"
         />
       </div>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="left">
           <Image
             width={640}
@@ -24,10 +24,10 @@ function About() {
         </div>
         <div className="right self-center">
           <div className="title wow fadeInUp mb-6">
-            <span className="text-[22px] text-primary font-bold mb-2">I m a Designer</span>
-            <h3 className="text-[40px]">I Can Design Anything You Want</h3>
+            <span className="text-[20px] lg:text-[22px] text-primary font-bold mb-2">I m a Designer</span>
+            <h3 className="text-[30px] lg:text-[40px]">I Can Design Anything You Want</h3>
           </div>
-          <div className="text wow fadeInUp mb-9 text-gray-500">
+          <div className="text wow fadeInUp mb-9 dark:text-gray-400 text-gray-600">
             <p>
               Hello there! I m a web designer, and I m very passionate and
               dedicated to my work. With 20 years experience as a professional

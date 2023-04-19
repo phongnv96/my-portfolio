@@ -23,7 +23,7 @@ function SlideShow(props: SlideShowProps) {
       if (wrapper.current !== null) {
         setWrapperWidth({
           width: wrapper.current?.offsetWidth,
-          height: wrapper.current?.height,
+          height: wrapper.current?.offsetHeight,
         });
       }
     }
@@ -73,7 +73,7 @@ function SlideShow(props: SlideShowProps) {
               <Image
                 width={wrapperWidth?.width}
                 src={item}
-                height={400}
+                height={wrapperWidth?.height}
                 alt="slide-show-image"
               />
             </div>

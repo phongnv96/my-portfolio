@@ -2,7 +2,8 @@ interface ProjectType {
     image: string;
     title: string;
     subTitle: string;
-    description: string;
+    description: any;
+    sliders: string[];
 }
 export type {
     ProjectType

@@ -12,7 +12,7 @@ export default function Home() {
   const {theme} = useContext(ThemeContext)
   return (
     <>
-      <main className={`flex container mx-auto flex-col items-center justify-between ${inter.className} px-4`}>
+      <main className={`flex mx-auto flex-col items-center justify-between ${inter.className} px-4`}>
         <section className="w-full h-screen">
           <div className="banner">
             <Image
@@ -26,7 +26,6 @@ export default function Home() {
           <HomeContainer/>
         </section>
       </main>
-      <div className="h-20"></div>
     </>
   );
 }

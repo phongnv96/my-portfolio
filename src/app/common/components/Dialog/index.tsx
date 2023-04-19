@@ -36,7 +36,7 @@ function DialogComponent(props: DialogProps) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-4xl dark:bg-slate-900 transform overflow-hidden text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="w-full rounded-lg max-w-4xl dark:bg-slate-900 transform overflow-hidden text-left align-middle shadow-xl transition-all">
                 {title ? (
                   <Dialog.Title
                     as="h3"
