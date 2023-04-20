@@ -1,4 +1,3 @@
-import "./_style.css";
 
 import React, { useState } from "react";
 
