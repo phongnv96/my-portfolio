@@ -3,7 +3,7 @@
 import React, { useContext } from "react";
 
 import ConfigArea from "../../components/ThemeSetting/ConfigArea";
-import Header from "./Headers/Header";
+import Header from "./Header/Header";
 import MouseCursor from "../../components/Mouse/MouseCursor";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { ThemeContextType } from "../../types/themeConfig";
