@@ -10,7 +10,7 @@ interface ColorItemListProps {
   updateColor?: (item: any, type: ThemeColorSelected) => void;
   type: ThemeColorSelected;
 }
-function ColorItemList(props: ColorItemListProps) {
+const ColorItemList = (props: ColorItemListProps) => {
   const { colors, title, selectedColor, updateColor, type } = props;
   const [indexSelected, setIndexSelected] = useState<number>(0);
   const onItemSelected = (item: any, index: number) => {

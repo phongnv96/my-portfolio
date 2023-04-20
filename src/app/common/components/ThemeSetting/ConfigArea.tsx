@@ -4,7 +4,7 @@ import ColorItemList from "./ColorItemList";
 import { ThemeColorSelected } from "../../constants";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
-function ConfigArea() {
+const ConfigArea = () => {
   const { theme, updateColor } = useContext(ThemeContext);
   return (
     <div className="fixed right-[-200px] top-1/4 flex flex-row hover:translate-x-[-200px] duration-200 transition-transform">

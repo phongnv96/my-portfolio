@@ -1,12 +1,10 @@
-'use client'
-
 import React, { useContext } from "react";
 
 import { ThemeContext } from "../contexts/ThemeContext";
 import { ThemeContextType } from "../types/themeConfig";
 import { ThemeMode } from "../constants";
 
-function ButtonSwitchTheme() {
+const ButtonSwitchTheme = () => {
   const { theme, toggleTheme } = useContext(ThemeContext) as ThemeContextType;
   return (
     <button

@@ -2,13 +2,46 @@
 
 import "./_style.css";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Button from "@/app/common/components/Button";
 import ButtonSwitchTheme from "@/app/common/components/ButtonSwitchTheme";
 
-export default function Header() {
+const navLink = [
+  {
+    title: "Home",
+    link: "#home",
+  },
+  {
+    title: "About",
+    link: "#about",
+  },
+  {
+    title: "Portfolio",
+    link: "#portfolio",
+  },
+  {
+    title: "Skills",
+    link: "#skills",
+  },
+  {
+    title: "Experiences",
+    link: "#experiences",
+  },
+  {
+    title: "Contact",
+    link: "#contact-me",
+  },
+];
+
+const Header = () => {
   const el = useRef<any>();
+  const [selectedLink, setSelectedLing] = useState("#home");
+
+  const onSelectLink = (link: string) => {
+    setSelectedLing(link);
+  };
+
   useEffect(() => {
     const onScroll = (event?: Event) => {
       if (window.pageYOffset > 0) {
@@ -41,18 +74,18 @@ export default function Header() {
             aria-label="Site Nav"
             className="hidden gap-8 text-sm font-medium md:flex"
           >
-            <a className="" href="">
-              About
-            </a>
-            <a className="" href="">
-              Blog
-            </a>
-            <a className="" href="">
-              Projects
-            </a>
-            <a className="" href="">
-              Contact
-            </a>
+            {navLink.map((nav, index) => (
+              <a
+                className={`hover:text-primary ${
+                  selectedLink === nav.link ? "text-primary" : ""
+                }`}
+                href={nav.link}
+                onClick={() => onSelectLink(nav.link)}
+                key={`nav-link-${index}`}
+              >
+                {nav.title}
+              </a>
+            ))}
           </nav>
 
           <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
@@ -87,4 +120,5 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+export default Header;

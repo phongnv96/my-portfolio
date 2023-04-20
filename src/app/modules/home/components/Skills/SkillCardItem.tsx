@@ -5,7 +5,7 @@ interface SkillCardItemProps {
   image: string;
 }
 
-function SkillCardItem(props: SkillCardItemProps) {
+const SkillCardItem = (props: SkillCardItemProps) => {
   const { image } = props;
   return (
     <div className="p-4 rounded-lg border-gray-500 bg-gray-500 w-[70px] h-[70px] lg:w-[150px] lg:h-[150px]">

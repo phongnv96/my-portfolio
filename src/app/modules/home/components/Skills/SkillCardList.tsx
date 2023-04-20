@@ -19,7 +19,7 @@ const skills = [
   "/icons/amazon.svg",
 ];
 
-function SkillCardList() {
+const SkillCardList = () => {
   return (
     <div className="flex flex-row flex-wrap gap-6 z-0 mt-10 lg:mt-20">
       {skills.map((item, index) => (

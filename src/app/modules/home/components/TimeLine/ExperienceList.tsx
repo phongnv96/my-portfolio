@@ -37,7 +37,7 @@ const experiencesData: ExperienceType[] = [
   },
 ];
 
-function ExperienceList() {
+const ExperienceList = () => {
   return (
     <div id="cd-timeline" className="cd-container">
       {experiencesData.map((item, index) => (

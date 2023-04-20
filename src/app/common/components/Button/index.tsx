@@ -8,7 +8,7 @@ interface ButtonProps {
   className?: string;
 }
 
-function Button(props: ButtonProps) {
+const Button = (props: ButtonProps) => {
   const { type = "fill", children, className } = props;
   return (
     <button className={`${className} btn ${type}`}>

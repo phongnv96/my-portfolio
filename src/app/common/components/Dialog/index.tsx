@@ -8,7 +8,7 @@ interface DialogProps {
   children: React.ReactNode;
 }
 
-function DialogComponent(props: DialogProps) {
+const DialogComponent = (props: DialogProps) => {
   const { isOpen, onClose, children, title } = props;
   return (
     <Transition appear show={isOpen} as={Fragment}>

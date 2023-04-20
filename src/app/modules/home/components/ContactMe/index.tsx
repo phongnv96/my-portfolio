@@ -3,9 +3,9 @@ import Image from "next/image";
 import Information from "./Information";
 import React from "react";
 
-function ContactMe() {
+const ContactMe = () => {
   return (
-    <section className="mt-36 relative">
+    <section className="mt-36 relative" id="contact-me">
       <div className="absolute top-0 left-0">
         <Image
           width={160}
@@ -40,7 +40,7 @@ function ContactMe() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-10 pb-36">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-20 pb-36">
           <Information />
           <ContactForm />
         </div>

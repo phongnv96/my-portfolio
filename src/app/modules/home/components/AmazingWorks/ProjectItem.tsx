@@ -16,7 +16,7 @@ interface ProcessItemProps {
   isRevertDisplay: boolean;
 }
 
-function ProjectItem(props: ProcessItemProps) {
+const ProjectItem = (props: ProcessItemProps) => {
   const { image, title, subTitle, description, sliders, isRevertDisplay } =
     props;
   const [isOpenDialog, setIsOpenDialog] = useState(false);

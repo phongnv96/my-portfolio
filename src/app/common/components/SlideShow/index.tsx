@@ -5,7 +5,7 @@ import Image from "next/image";
 interface SlideShowProps {
   slides: any[];
 }
-function SlideShow(props: SlideShowProps) {
+const SlideShow = (props: SlideShowProps) => {
   const { slides } = props;
   const wrapper = useRef<any>(null);
   const slider = useRef<any>(null);

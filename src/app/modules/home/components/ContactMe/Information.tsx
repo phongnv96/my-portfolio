@@ -1,10 +1,10 @@
 import React from "react";
 
-function Information() {
+const Information = () => {
   return (
     <div className="left wow fadeInLeft" data-wow-duration="1s">
       <ul>
-        <li className="py-5">
+        <li className="pb-5">
           <div className="flex gap-6 items-center">
             <div className="icon w-[90px] h-[90px] rounded-full bg-red-300 flex justify-center items-center ">
               <svg

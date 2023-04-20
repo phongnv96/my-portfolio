@@ -2,9 +2,9 @@ import Button from "@/app/common/components/Button";
 import Image from "next/image";
 import React from "react";
 
-function About() {
+const About = () => {
   return (
-    <div className="relative container mx-auto pt-44 lg:pt-28 ">
+    <div className="relative container mx-auto pt-44 lg:pt-28 " id="about">
       <div className="absolute top-5 lg:top-0 left-0">
         <Image
           width={130}

@@ -7,7 +7,7 @@ import React from "react";
 import Skills from "../components/Skills";
 import TimeLine from "../components/TimeLine";
 
-function HomeContainer() {
+const HomeContainer = () => {
   return (
     <>
       <Banner />

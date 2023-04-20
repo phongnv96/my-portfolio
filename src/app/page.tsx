@@ -8,12 +8,12 @@ import { useContext } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const  Home = () => {
   const {theme} = useContext(ThemeContext)
   return (
     <>
       <main className={`flex mx-auto flex-col items-center justify-between ${inter.className} px-4`}>
-        <section className="w-full h-screen">
+        <section className="w-full h-full min-h-screen">
           <div className="banner">
             <Image
               className="-z-10"
@@ -29,3 +29,4 @@ export default function Home() {
     </>
   );
 }
+export default Home

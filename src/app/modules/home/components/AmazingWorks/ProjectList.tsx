@@ -85,7 +85,7 @@ const projectPreview: ProjectType[] = [
     ],
   },
 ];
-function ProductList() {
+const ProductList = () => {
   return (
     <div className="py-[30px] lg:py-[100px] divide-y divide-gray-500 lg:divide-y-0">
       {projectPreview.map((item, index) => (

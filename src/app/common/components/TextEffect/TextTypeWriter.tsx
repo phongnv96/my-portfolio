@@ -11,7 +11,7 @@ type ComponentProps = {
 /**
  * A Simple React Component for adding a nice Typewriter effect to your project.
  */
-export const Typewriter = ({
+const Typewriter = ({
   words = ['Hello World!', 'This is', 'a simple Typewriter'],
   loop = false,
   typeSpeed = 100,
@@ -41,3 +41,4 @@ export const Typewriter = ({
     </div>
   )
 }
+export default Typewriter

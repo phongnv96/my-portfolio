@@ -8,7 +8,7 @@ interface ProcessItemProps {
   svg: any;
 }
 
-function ProcessItem(props: ProcessItemProps) {
+const ProcessItem = (props: ProcessItemProps) => {
   const { title, image, description, svg } = props;
   return (
     <div className="list_inner text-center mb-0 lg:mb-[70px]">

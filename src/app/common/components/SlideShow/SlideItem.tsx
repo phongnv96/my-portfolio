@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SlideItem() {
+const SlideItem = () => {
   return (
     <div>SlideItem</div>
   )

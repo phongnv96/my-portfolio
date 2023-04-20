@@ -23,9 +23,9 @@ const dataProcessList: ProcessType[] = [
   },
 ];
 
-function ProcessList() {
+const  ProcessList = () => {
   return (
-    <div className="flex container mx-auto flex-col lg:flex-row gap-14">
+    <div className="flex container mx-auto flex-col lg:flex-row gap-14" id="process">
       {dataProcessList.map((item, index) => (
         <ProcessItem key={`process-${index}`} {...item} />
       ))}

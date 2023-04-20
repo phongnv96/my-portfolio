@@ -9,7 +9,7 @@ interface TextEffectProps {
   timeChange?: number;
 }
 
-export default function TextEffect(props: TextEffectProps) {
+const TextEffect = (props: TextEffectProps) => {
   const { data, time = 200, loop = 0, timeChange = 3000 } = props;
   const elText = useRef<any>();
   const loopRef = useRef<number>(0);
@@ -59,3 +59,4 @@ export default function TextEffect(props: TextEffectProps) {
     </div>
   );
 }
+export default TextEffect

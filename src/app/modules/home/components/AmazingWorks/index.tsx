@@ -2,9 +2,9 @@ import Image from "next/image";
 import ProductList from "./ProjectList";
 import React from "react";
 
-function AmazingWorks() {
+const AmazingWorks = () => {
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto " id="portfolio">
       <div className="mt-[80px] lg:mt-[185px] relative">
         <div className="absolute top-0 left-0">
           <Image

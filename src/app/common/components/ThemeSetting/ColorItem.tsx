@@ -9,7 +9,7 @@ interface ColorItemProps {
   className?: string;
   onSelectColor: (item: any, index: number) => void;
 }
-function ColorItem(props: ColorItemProps) {
+const ColorItem = (props: ColorItemProps) => {
   const { color, index, isSelected, className, onSelectColor } = props;
   return (
     <a

@@ -2,7 +2,7 @@ import "./_style.css";
 
 import React, { useEffect, useRef } from "react";
 
-export default function MouseCursor() {
+const MouseCursor = () => {
   const elCursorInner = useRef<any>();
   const elCursorOuter = useRef<any>();
 
@@ -56,3 +56,4 @@ export default function MouseCursor() {
     </>
   );
 }
+export default MouseCursor

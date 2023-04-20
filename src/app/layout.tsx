@@ -7,11 +7,11 @@ import Loading from "./loading";
 import { Suspense } from "react";
 import ThemeProvider from "./common/contexts/ThemeContext";
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}) => {
   return (
     <ThemeProvider>
       <html lang="en">
@@ -22,3 +22,5 @@ export default function RootLayout({
     </ThemeProvider>
   );
 }
+
+export default RootLayout

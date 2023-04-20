@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import SkillCardList from "./SkillCardList";
 
-function Skills() {
+const Skills = () => {
   return (
-    <div className="relative">
+    <div className="relative" id="skills">
       <Image
         className="lg:block hidden absolute left-0 top-[-10px] -z-[1] "
         width={460}

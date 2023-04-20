@@ -2,9 +2,9 @@ import ExperienceList from "./ExperienceList";
 import Image from "next/image";
 import React from "react";
 
-function TimeLine() {
+const TimeLine = () => {
   return (
-    <section className=" mt-36 relative">
+    <section className=" mt-36 relative" id="experiences">
       <div className="absolute top-0 right-0">
         <Image
           width={350}

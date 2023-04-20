@@ -7,7 +7,7 @@ interface ExperienceItemProps {
   skills: string[];
   timeLine: string;
 }
-function ExperienceItem(props: ExperienceItemProps) {
+const ExperienceItem = (props: ExperienceItemProps) => {
   const { title, role, durations, descriptions, skills, timeLine } = props;
   return (
     <div className="cd-timeline-block">
@@ -44,7 +44,7 @@ function ExperienceItem(props: ExperienceItemProps) {
                 stroke="none"
                 strokeWidth="1"
                 fill="none"
-                fill-rule="evenodd"
+                fillRule="evenodd"
               >
                 <g
                   id="Dribbble-Light-Preview"
