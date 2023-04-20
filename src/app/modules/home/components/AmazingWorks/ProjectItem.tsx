@@ -6,6 +6,7 @@ import DialogComponent from "@/app/common/components/Dialog";
 import Image from "next/image";
 import SlideShow from "@/app/common/components/SlideShow";
 import Tilt from "react-parallax-tilt";
+import { useBreakpoints } from "@/app/common/hooks/useBreakPoint";
 
 interface ProcessItemProps {
   image: string;
@@ -20,6 +21,7 @@ const ProjectItem = (props: ProcessItemProps) => {
   const { image, title, subTitle, description, sliders, isRevertDisplay } =
     props;
   const [isOpenDialog, setIsOpenDialog] = useState(false);
+  const { isLg, isMd } = useBreakpoints();
   const onCloseDialog = () => {
     setIsOpenDialog(false);
   };
@@ -35,8 +37,19 @@ const ProjectItem = (props: ProcessItemProps) => {
             isRevertDisplay ? "lg:order-2" : ""
           } self-center`}
         >
-          <Tilt>
-            {/* <div className="absolute border-solid border-primary w-full h-full top-9 -left-9 border-[10px] -z-[1]"></div> */}
+          {isLg || isMd ? (
+            <Tilt>
+              {/* <div className="absolute border-solid border-primary w-full h-full top-9 -left-9 border-[10px] -z-[1]"></div> */}
+              <Image
+                className="z-[1] border-shadow rounded-lg"
+                src={image}
+                width={650}
+                height={315}
+                alt="product"
+                style={{ width: "100%" }}
+              />
+            </Tilt>
+          ) : (
             <Image
               className="z-[1] border-shadow rounded-lg"
               src={image}
@@ -45,7 +58,7 @@ const ProjectItem = (props: ProcessItemProps) => {
               alt="product"
               style={{ width: "100%" }}
             />
-          </Tilt>
+          )}
         </a>
         <div className="self-center">
           <div className="title lg:mb-6">
@@ -64,6 +77,6 @@ const ProjectItem = (props: ProcessItemProps) => {
       </DialogComponent>
     </>
   );
-}
+};
 
 export default ProjectItem;
