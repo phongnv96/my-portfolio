@@ -8,25 +8,15 @@ import { useContext } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const  Home = () => {
-  const {theme} = useContext(ThemeContext)
+const Home = () => {
   return (
     <>
-      <main className={`flex mx-auto flex-col items-center justify-between ${inter.className} px-4`}>
+      <main className={`mx-auto relative ${inter.className} `}>
         <section className="w-full h-full min-h-screen">
-          <div className="banner">
-            <Image
-              className="-z-10"
-              fill
-              src={theme?.isDarkMode ? "/images/bannerBgImage.jpeg" : "/images/bannerBgImageLight.jpeg"}
-              alt={""}
-              style={{objectFit: 'cover'}}
-            />
-          </div>
-          <HomeContainer/>
+          <HomeContainer />
         </section>
       </main>
     </>
   );
-}
-export default Home
+};
+export default Home;

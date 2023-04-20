@@ -11,14 +11,16 @@ const HomeContainer = () => {
   return (
     <>
       <Banner />
-      <ProcessList />
-      <About />
-      <AmazingWorks />
-      <Skills />
-      <TimeLine />
-      <ContactMe />
+      <div className="px-4">
+        <ProcessList />
+        <About />
+        <AmazingWorks />
+        <Skills />
+        <TimeLine />
+        <ContactMe />
+      </div>
     </>
   );
-}
+};
 
 export default HomeContainer;

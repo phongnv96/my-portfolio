@@ -93,8 +93,8 @@ const SlideShow = (props: SlideShowProps) => {
           className="flex-1 rtl:rotate-180 h-8 w-8"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             d="M15.75 19.5L8.25 12l7.5-7.5"
           />
         </svg>
@@ -112,9 +112,9 @@ const SlideShow = (props: SlideShowProps) => {
         >
           <path
             d="M9 5l7 7-7 7"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
         </svg>
       </a>
