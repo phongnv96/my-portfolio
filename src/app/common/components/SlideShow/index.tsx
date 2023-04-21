@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
+import { useBreakpoints } from "../../hooks/useBreakPoint";
 
 interface SlideShowProps {
   slides: any[];
@@ -10,15 +11,21 @@ const SlideShow = (props: SlideShowProps) => {
   const wrapper = useRef<any>(null);
   const slider = useRef<any>(null);
   const [currentStep, setCurrentStep] = useState(0);
+  const { isLg } = useBreakpoints();
+
   const [wrapperWidth, setWrapperWidth] = useState<{
     width: number;
     height: number;
   }>({
     width: 500,
-    height: 300,
+    height: 200,
   });
 
   useEffect(() => {
+    setWrapperWidth({
+      width: 500,
+      height: isLg ? 200 : 400,
+    });
     function handleResize() {
       if (wrapper.current !== null) {
         setWrapperWidth({
@@ -27,11 +34,13 @@ const SlideShow = (props: SlideShowProps) => {
         });
       }
     }
+
     window.addEventListener("resize", handleResize);
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
 
   const next = () => {
     let step = currentStep + 1;
@@ -120,6 +129,6 @@ const SlideShow = (props: SlideShowProps) => {
       </a>
     </>
   );
-}
+};
 
 export default SlideShow;

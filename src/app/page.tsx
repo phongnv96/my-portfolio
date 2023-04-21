@@ -1,10 +1,7 @@
 "use client";
 
 import HomeContainer from "./modules/home/containers/Home.container";
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import { ThemeContext } from "./common/contexts/ThemeContext";
-import { useContext } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 

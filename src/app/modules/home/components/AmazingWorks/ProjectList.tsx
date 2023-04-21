@@ -15,6 +15,12 @@ const projectPreview: ProjectType[] = [
       "/images/product-preview1.3.jpg",
       "/images/product-preview1.4.jpg",
     ],
+    skills: [
+      "Angular",
+      "Javascript",
+      "C#",
+      "TypeScript",
+    ],
   },
   {
     image: "/images/project-preview1.png",
@@ -24,10 +30,9 @@ const projectPreview: ProjectType[] = [
       <>
         <div>
           <section className="markdown">
-              Following the MSB Design specification, we developed a React UI
-              library <code>antd-msb</code> that contains a set of high quality
-              components and demos for building rich, interactive user
-              interfaces.
+            Following the MSB Design specification, we developed a React UI
+            library <code>antd-msb</code> that contains a set of high quality
+            components and demos for building rich, interactive user interfaces.
           </section>
           <h2
             id="✨-Features"
@@ -60,6 +65,7 @@ const projectPreview: ProjectType[] = [
       "/images/project-preview1.3.png",
       "/images/project-preview1.4.png",
     ],
+    skills: ["ReactJS", "Flutter", "Javascript", "Java", "TypeScript", "Dart"],
   },
   {
     image: "/images/project-preview2.1.png",
@@ -70,10 +76,9 @@ const projectPreview: ProjectType[] = [
         <div>
           <h1>MSB Design of Flutter</h1>
           <section className="markdown">
-              Another version of MSB Design system for mobile app, we developed
-              a Flutter UI library that contains a set of high quality
-              components and demos for building rich, interactive user
-              interfaces.
+            Another version of MSB Design system for mobile app, we developed a
+            Flutter UI library that contains a set of high quality components
+            and demos for building rich, interactive user interfaces.
           </section>
         </div>
       </>
@@ -84,18 +89,22 @@ const projectPreview: ProjectType[] = [
       "/images/project-preview2.3.png",
       "/images/project-preview2.4.png",
     ],
+    skills: ["ReactJS", "Flutter", "Javascript", "Java", "TypeScript", "Dart"],
   },
 ];
 const ProductList = () => {
   return (
     <div className="py-[30px] lg:py-[100px] divide-y divide-gray-500 lg:divide-y-0">
       {projectPreview.map((item, index) => (
-        <div key={`product-preview-${index} `} className="mb-0 py-10 lg:py-0 lg:mb-28">
+        <div
+          key={`product-preview-${index} `}
+          className="mb-0 py-10 lg:py-0 lg:mb-28"
+        >
           <ProjectItem isRevertDisplay={index % 2 === 1} {...item} />
         </div>
       ))}
     </div>
   );
-}
+};
 
 export default ProductList;

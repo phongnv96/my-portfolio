@@ -8,6 +8,7 @@ const MouseCursor = () => {
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
+      event.stopImmediatePropagation();
       if (elCursorInner) {
         elCursorInner.current.style.visibility = "visible";
         elCursorInner.current.style.transform = `translate(${event.pageX}px , ${event.pageY - window.pageYOffset}px)`;
@@ -19,14 +20,16 @@ const MouseCursor = () => {
       }
     };
 
-    const handleMouseOver = () => {
-      elCursorInner.current.classList.add("cursor-hover");
-      elCursorOuter.current.classList.add("cursor-hover");
+    const handleMouseOver = (event: any) => {
+      event.stopImmediatePropagation();
+      elCursorInner.current?.classList?.add("cursor-hover");
+      elCursorOuter.current?.classList?.add("cursor-hover");
     };
 
-    const handleMouseLeave = () => {
-      elCursorInner.current.classList.remove("cursor-hover");
-      elCursorOuter.current.classList.remove("cursor-hover");
+    const handleMouseLeave = (event: any) => {
+      event.stopImmediatePropagation();
+      elCursorInner?.current?.classList.remove("cursor-hover");
+      elCursorOuter?.current?.classList.remove("cursor-hover");
     };
 
     window.removeEventListener("mousemove", handleMouseMove);

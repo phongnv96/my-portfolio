@@ -4,7 +4,6 @@
     font-weight: 500;
     border-radius: 50px;
     border: 2px solid var(--primary-color);
-    padding: 14px 48px 13px;
     position: relative;
     overflow: hidden;
 }

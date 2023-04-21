@@ -1,8 +1,10 @@
 import Button from "@/app/common/components/Button";
+import {ThemeContext} from "@/app/common/contexts/ThemeContext";
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 
 const About = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="relative container mx-auto pt-44 lg:pt-28 " id="about">
       <div className="absolute top-5 lg:top-0 left-0">
@@ -18,7 +20,7 @@ const About = () => {
           <Image
             width={640}
             height={630}
-            src="/images/introduce.jpeg"
+            src={theme?.isDarkMode ? "/images/introduce.jpeg" : "/images/introduce-light.jpg"}
             alt="about_me"
           />
         </div>

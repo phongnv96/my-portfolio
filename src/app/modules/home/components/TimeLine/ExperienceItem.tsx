@@ -13,9 +13,9 @@ const ExperienceItem = (props: ExperienceItemProps) => {
     <div className="cd-timeline-block">
       <div className="cd-timeline-img cd-picture"></div>
 
-      <div className="cd-timeline-content">
+      <div className="cd-timeline-content bg-gray-100 dark:bg-[#333C42]">
         <h2>{title}</h2>
-        <div className="p-2 rounded flex flex-col lg:flex-row bg-gray-800  justify-between text-xs">
+        <div className="p-2 rounded flex flex-col lg:flex-row bg-gray-200 dark:bg-gray-600  justify-between text-xs">
           <span className="timeline-content-info-title flex items-center gap-1">
             <svg
               fill="currentColor"
@@ -64,12 +64,11 @@ const ExperienceItem = (props: ExperienceItemProps) => {
           </span>
         </div>
         <div className="py-4">{descriptions}</div>
-        <span className="cd-date">{timeLine}</span>
         {skills.length && (
           <ul className="content-skills flex text-xs gap-1 flex-wrap">
             {skills.map((item, index) => (
               <li
-                className="p-1 bg-gray-600 rounded"
+                className="p-1 bg-gray-200 dark:bg-gray-600 rounded"
                 key={`experience-skill-${index}`}
               >
                 {item}
@@ -77,9 +76,10 @@ const ExperienceItem = (props: ExperienceItemProps) => {
             ))}
           </ul>
         )}
+        <span className="cd-date mt-4">{timeLine}</span>
       </div>
     </div>
   );
-}
+};
 
 export default ExperienceItem;

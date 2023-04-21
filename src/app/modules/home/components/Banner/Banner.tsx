@@ -21,7 +21,7 @@ const Banner = () => {
         <div className="content w-full px-4 py-[100px] min-h-screen lg:h-full lg:justify-between flex lg:flex-row flex-col-reverse items-center">
           <div className="details h-full w-full lg:w-1/2">
             <div className="hello">
-              <h3 className="text-primary text-[30px]">Hello, I`&apos`m</h3>
+              <h3 className="text-primary text-[30px]">Hello, I`m</h3>
             </div>
             <div className="name">
               <h3 className="text-[40px] lg:text-[60px] font-bold">
@@ -38,7 +38,7 @@ const Banner = () => {
             </div>
             <div className="text">
               <p>
-                I`&apos`m creative designer based in New York, and I`&apos`m
+                I`m creative designer based in New York, and I`m
                 very passionate and dedicated to my work.
               </p>
             </div>

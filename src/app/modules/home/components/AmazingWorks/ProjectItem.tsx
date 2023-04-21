@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 import DialogComponent from "@/app/common/components/Dialog";
@@ -14,10 +13,11 @@ interface ProcessItemProps {
   description: string;
   sliders: string[];
   isRevertDisplay: boolean;
+  skills: string[]
 }
 
 const ProjectItem = (props: ProcessItemProps) => {
-  const { image, title, subTitle, description, sliders, isRevertDisplay } =
+  const { image, title, subTitle, description, sliders, isRevertDisplay, skills } =
     props;
   const [isOpenDialog, setIsOpenDialog] = useState(false);
   const { isLg, isMd } = useBreakpoints();
@@ -68,6 +68,20 @@ const ProjectItem = (props: ProcessItemProps) => {
           </div>
           <div className="text wow fadeInUp lg:mb-9 dark:text-gray-400 text-gray-600">
             {description}
+          </div>
+          <div className="mt-3">
+            {skills.length && (
+              <ul className="content-skills flex text-xs gap-1 flex-wrap">
+                {skills.map((item, index) => (
+                  <li
+                    className="p-1 bg-gray-200 dark:bg-gray-600 rounded"
+                    key={`experience-skill-${index}`}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>
