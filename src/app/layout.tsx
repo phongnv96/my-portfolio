@@ -16,7 +16,7 @@ const RootLayout = ({
     <ThemeProvider>
       <html lang="en">
         <LayoutBasic>
-          <Suspense fallback={<Loading />}>{children}</Suspense>
+          {children}
         </LayoutBasic>
       </html>
     </ThemeProvider>
