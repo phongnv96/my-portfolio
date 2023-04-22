@@ -1,8 +1,9 @@
-import "./_style.css";
+import './_style.css';
 
-import React from "react";
+import React from 'react';
 
-interface ButtonProps {
+interface ButtonProps
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type"> {
   type?: "outlined" | "fill";
   children: React.ReactNode;
   className?: string;
@@ -13,6 +14,7 @@ const Button = (props: ButtonProps) => {
   const { type = "fill", children, className, size = "default" } = props;
   return (
     <button
+      onClick={props?.onClick}
       className={`${className} btn ${type} ${
         size === "small" ? "px-4 py-1" : " px-6 py-3"
       }`}

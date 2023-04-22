@@ -1,12 +1,17 @@
 "use client";
 
-import "./_style.css";
+import './_style.css';
 
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
-import Button from "@/app/common/components/Button";
-import ButtonSwitchTheme from "@/app/common/components/ButtonSwitchTheme";
-import NavMobile from "./NavMobile";
+import Button from '@/app/common/components/Button';
+import ButtonSwitchTheme from '@/app/common/components/ButtonSwitchTheme';
+
+import NavMobile from './NavMobile';
 
 const navLink = [
   {
@@ -96,12 +101,21 @@ const Header = () => {
                 ))}
               </nav>
 
-              <div className="hidden flex-1 items-center justify-end gap-4 sm:flex">
+              <div className="flex-1 items-center justify-end gap-4 sm:flex hidden">
                 <ButtonSwitchTheme />
-                <Button size="small" type="outlined">Download CV</Button>
+                <a href="#contact-me">
+                  <Button
+                    className="hidden lg:block"
+                    size="small"
+                    type="outlined"
+                  >
+                    Download CV
+                  </Button>
+                </a>
               </div>
 
-              <div className="lg:hidden">
+              <div className="lg:hidden justify-end  items-center gap-4">
+                <ButtonSwitchTheme />
                 <button
                   className="rounded-lg bg-gray-100 p-2 text-gray-600"
                   type="button"
