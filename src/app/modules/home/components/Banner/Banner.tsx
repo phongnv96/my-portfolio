@@ -49,11 +49,11 @@ const Banner = () => {
               </p>
             </div>
             <div className="button">
-              <span className="mt-8">
+              <div className="mt-8">
                 <a href="#about">
                   <Button>About Me</Button>
                 </a>
-              </span>
+              </div>
               <div className="social">
                 <ul>
                   <li>
