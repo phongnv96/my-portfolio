@@ -3,8 +3,6 @@
 import "./globals.css";
 
 import LayoutBasic from "./common/layout/basic";
-import Loading from "./common/components/Loading/loading";
-import { Suspense } from "react";
 import ThemeProvider from "./common/contexts/ThemeContext";
 
 const RootLayout = ({

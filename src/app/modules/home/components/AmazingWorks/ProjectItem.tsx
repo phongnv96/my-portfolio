@@ -5,6 +5,7 @@ import Image from "next/image";
 import SlideShow from "@/app/common/components/SlideShow";
 import Tilt from "react-parallax-tilt";
 import { useBreakpoints } from "@/app/common/hooks/useBreakPoint";
+import ReactWOW from "react-wow";
 
 interface ProcessItemProps {
   image: string;
@@ -13,12 +14,19 @@ interface ProcessItemProps {
   description: string;
   sliders: string[];
   isRevertDisplay: boolean;
-  skills: string[]
+  skills: string[];
 }
 
 const ProjectItem = (props: ProcessItemProps) => {
-  const { image, title, subTitle, description, sliders, isRevertDisplay, skills } =
-    props;
+  const {
+    image,
+    title,
+    subTitle,
+    description,
+    sliders,
+    isRevertDisplay,
+    skills,
+  } = props;
   const [isOpenDialog, setIsOpenDialog] = useState(false);
   const { isLg, isMd } = useBreakpoints();
   const onCloseDialog = () => {
@@ -30,15 +38,25 @@ const ProjectItem = (props: ProcessItemProps) => {
   return (
     <>
       <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 `}>
-        <a
-          onClick={onOpenDialog}
-          className={`relative ${
-            isRevertDisplay ? "lg:order-2" : ""
-          } self-center`}
-        >
-          {isLg || isMd ? (
-            <Tilt>
-              {/* <div className="absolute border-solid border-primary w-full h-full top-9 -left-9 border-[10px] -z-[1]"></div> */}
+          <a
+            onClick={onOpenDialog}
+            className={`relative ${
+              isRevertDisplay ? "lg:order-2" : ""
+            } self-center`}
+          >
+            {isLg || isMd ? (
+              <Tilt>
+                {/* <div className="absolute border-solid border-primary w-full h-full top-9 -left-9 border-[10px] -z-[1]"></div> */}
+                <Image
+                  className="z-[1] border-shadow rounded-lg"
+                  src={image}
+                  width={650}
+                  height={315}
+                  alt="product"
+                  style={{ width: "100%" }}
+                />
+              </Tilt>
+            ) : (
               <Image
                 className="z-[1] border-shadow rounded-lg"
                 src={image}
@@ -47,18 +65,8 @@ const ProjectItem = (props: ProcessItemProps) => {
                 alt="product"
                 style={{ width: "100%" }}
               />
-            </Tilt>
-          ) : (
-            <Image
-              className="z-[1] border-shadow rounded-lg"
-              src={image}
-              width={650}
-              height={315}
-              alt="product"
-              style={{ width: "100%" }}
-            />
-          )}
-        </a>
+            )}
+          </a>
         <div className="self-center">
           <div className="title lg:mb-6">
             <span className="text-[20px] lg:text-[22px] text-primary font-bold opacity-50 mb-2">

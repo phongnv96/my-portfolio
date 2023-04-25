@@ -10,7 +10,6 @@ import { ThemeContextType } from "../../types/themeConfig";
 import Footer from "./Footer";
 import { useBreakpoints } from "../../hooks/useBreakPoint";
 import Loading from "@/app/common/components/Loading/loading";
-import NavMobile from "./Header/NavMobile";
 
 interface Props {
   children: React.ReactNode;
@@ -36,7 +35,7 @@ const LayoutBasic = (props: Props) => {
 
   return (
     <body className={theme?.themeMode} onLoad={onBodyLoaded}>
-      {showLoading && <Loading isLoading={loading} />}
+      {/* {showLoading && <Loading isLoading={loading} />} */}
       <Header />
   
       {props.children}
