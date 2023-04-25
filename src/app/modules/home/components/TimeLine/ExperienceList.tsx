@@ -9,8 +9,8 @@ const experiencesData: ExperienceType[] = [
   {
     title: "Maritime Bank",
     role: "Front End Leader",
-    timeLine: "DEC 21",
-    durations: "December 2021 - Current",
+    timeLine: "JAN 22 -  Current",
+    durations: "Jan 2022 - Current",
     descriptions: (
       <>
         <ul className="list-disc ml-3">
@@ -34,20 +34,18 @@ const experiencesData: ExperienceType[] = [
   {
     title: "Viettel Digital",
     role: "Web Developer",
-    timeLine: "DEC 19",
-    durations: "December 2019 - March 2020",
+    timeLine: "APR 2020",
+    durations: "Apr 2020 -  May 2022",
     descriptions: (
       <>
-        <p>Main responsibilities:</p>
         <ul className="list-disc ml-3">
+          <li>
+            Build a front-end structure, and create an Angular library UI for
+            multiple project reuse.
+          </li>
           <li>Upgrade and Development old projects using new technologies.</li>
           <li>Researching and suggesting new solutions for the company.</li>
-          <li>
-            Training and support team members. - Build front end projects
-            structure.
-          </li>
           <li>Write code base on customer required using angular 9 vs Java.</li>
-          <li>Testing and fix bug.</li>
         </ul>
       </>
     ),
@@ -61,42 +59,39 @@ const experiencesData: ExperienceType[] = [
     ],
   },
   {
-    title: "MP Solution",
+    title: "MP Software",
     role: "Front End Developer",
-    timeLine: "DEC 19",
-    durations: "December 2019 - March 2020",
-    descriptions: ` Main responsibilities:
-      - Upgrade and Development old projects using new technologies.
-      - Researching and suggesting new solutions for the company.
-      - Training and support team members.
-      - Build front end projects structure.
-      - Write code base on customer required using angular 9 vs Java
-      - Testing and fix bug`,
-    skills: [
-      "Angular",
-      "C#",
-      "Javascript",
-      "TypeScript",
-    ],
+    timeLine: "SEP 2019",
+    durations: "Sep 2019 -  Apr 2020",
+    descriptions: (
+      <>
+        <ul className="list-disc ml-3">
+          <li>System development based on customer requirements.</li>
+          <li>Development Front end of a dynamic CMS system.</li>
+          <li>Researching and suggesting new solutions for the company.</li>
+        </ul>
+      </>
+    ),
+    skills: ["Angular", "Javascript", "C#", "TypeScript"],
   },
   {
     title: "FPT Software",
     role: "Front End Developer",
-    timeLine: "DEC 19",
-    durations: "December 2019 - March 2020",
-    descriptions: ` Main responsibilities:
-      - Upgrade and Development old projects using new technologies.
-      - Researching and suggesting new solutions for the company.
-      - Training and support team members.
-      - Build front end projects structure.
-      - Write code base on customer required using angular 9 vs Java
-      - Testing and fix bug`,
-    skills: [
-      "Angular",
-      "Javascript",
-      "C#",
-      "TypeScript",
-    ],
+    timeLine: "MAY 2018",
+    durations: "May 2018 - Mar 2019",
+    descriptions: (
+      <>
+        <ul className="list-disc ml-3">
+          <li>
+            Write code based on customer requirements using angular 2+ vs .Net
+            core, VB .net...
+          </li>
+          <li>Codding, testing, and fixing bugs.</li>
+          <li>Training programming languages</li>
+        </ul>
+      </>
+    ),
+    skills: ["Angular", "Javascript", "C#", "TypeScript"],
   },
 ];
 
