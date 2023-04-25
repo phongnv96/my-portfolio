@@ -1,7 +1,8 @@
 "use client";
 
-import HomeContainer from "./modules/home/containers/Home.container";
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google';
+
+import HomeContainer from './modules/home/containers/Home.container';
 
 const inter = Inter({ subsets: ["latin"] });
 

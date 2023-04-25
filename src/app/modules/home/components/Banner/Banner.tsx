@@ -1,10 +1,12 @@
-import "./_style.css";
+import './_style.css';
 
-import Button from "@/app/common/components/Button";
-import Typewriter from "@/app/common/components/TextEffect/TextTypeWriter";
-import { ThemeContext } from "@/app/common/contexts/ThemeContext";
-import Image from "next/image";
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
+
+import Image from 'next/image';
+
+import Button from '@/app/common/components/Button';
+import Typewriter from '@/app/common/components/TextEffect/TextTypeWriter';
+import { ThemeContext } from '@/app/common/contexts/ThemeContext';
 
 const Banner = () => {
   const { theme } = useContext(ThemeContext);
@@ -15,7 +17,11 @@ const Banner = () => {
     >
       <div
         className="banner min-h-screen h-full w-full overflow-hidden bg-cover -z-10 absolute"
-        style={{ backgroundImage: theme?.isDarkMode ? `url("/images/bannerBgImage.jpeg")` :  `url("/images/bannerBgImageLight.jpeg")`}}
+        style={{
+          backgroundImage: theme?.isDarkMode
+            ? `url("/images/bannerBgImage.jpeg")`
+            : `url("/images/bannerBgImageLight.jpeg")`,
+        }}
       ></div>
       <div className=" container mx-auto">
         <div className="content w-full px-4 py-[100px] min-h-screen lg:h-full lg:justify-between flex lg:flex-row flex-col-reverse items-center">
@@ -38,13 +44,15 @@ const Banner = () => {
             </div>
             <div className="text">
               <p>
-                I`m creative designer based in New York, and I`m
-                very passionate and dedicated to my work.
+                I`m creative designer based in New York, and I`m very passionate
+                and dedicated to my work.
               </p>
             </div>
             <div className="button">
               <div className="mt-8">
-                <Button>About Me</Button>
+                <a href="#about">
+                  <Button>About Me</Button>
+                </a>
               </div>
               <div className="social">
                 <ul>
