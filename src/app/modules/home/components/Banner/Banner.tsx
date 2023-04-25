@@ -38,14 +38,14 @@ const Banner = () => {
             </div>
             <div className="job text-[19px] mb-6">
               <p>
-                A <span className="text-success">Creative Designer </span>
-                <span className="text-secondary">New York</span>
+                A <span className="text-success">Web Developer </span>
+                <span className="text-secondary">Viet Nam</span>
               </p>
             </div>
             <div className="text">
               <p>
-                I`m creative designer based in New York, and I`m very passionate
-                and dedicated to my work.
+                I`m very passionate and dedicated to my work. I`m well-versed in
+                coding standards, and the latest web development trends.
               </p>
             </div>
             <div className="button">

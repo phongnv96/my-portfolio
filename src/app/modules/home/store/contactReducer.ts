@@ -1,10 +1,10 @@
 import {
-  ContacInfoFormType,
+  ContactInfoFormType,
   FormItemActionType,
-} from "../types/ContactFormType";
+} from '../types/ContactFormType';
 
 function contactFormReducer(
-  state: ContacInfoFormType,
+  state: ContactInfoFormType,
   action: FormItemActionType
 ) {
   switch (action.type) {
@@ -19,6 +19,10 @@ function contactFormReducer(
         [name]: { ...currentFiled[name], value, hasError, error, touched },
         isFormValid,
       };
+    case "CHECK_VALIDATION": 
+      return {
+        ...action.data,
+      }
     default:
       return state;
   }

@@ -1,33 +1,38 @@
-import Button from "@/app/common/components/Button";
-import React, { useReducer, useState } from "react";
-import {
-  ContacInfoFormType,
-  ContactInfoType,
-} from "../../types/ContactFormType";
-import { contactFormReducer } from "../../store/contactReducer";
-import { validateInput } from "@/app/common/utils/formUtils";
+import React, { useReducer } from 'react';
 
-const initialState: ContacInfoFormType = {
-  name: { name: "name", value: "", touched: false, hasError: true, error: "" },
+import { toast } from 'react-hot-toast';
+
+import Button from '@/app/common/components/Button';
+import { validateInput } from '@/app/common/utils/formUtils';
+
+import { contactInfoCreateMessage } from '../../services';
+import { contactFormReducer } from '../../store/contactReducer';
+import {
+  ContactInfoFormType,
+  ContactInfoType,
+} from '../../types/ContactFormType';
+
+const initialState: ContactInfoFormType = {
+  name: { name: "name", value: "", touched: false, hasError: false, error: "" },
   email: {
     name: "email",
     value: "",
     touched: false,
-    hasError: true,
+    hasError: false,
     error: "",
   },
   phone: {
     name: "phone",
     value: "",
     touched: false,
-    hasError: true,
+    hasError: false,
     error: "",
   },
   message: {
     name: "message",
     value: "",
     touched: false,
-    hasError: true,
+    hasError: false,
     error: "",
   },
   isFormValid: false,
@@ -35,20 +40,6 @@ const initialState: ContacInfoFormType = {
 
 export const ContactForm = () => {
   const [formState, dispatch] = useReducer(contactFormReducer, initialState);
-
-  const createMessage = async () => {
-    const response = await fetch("http://localhost:3000/api/contact", {
-      method: "POST",
-      body: JSON.stringify({
-        name: "Phongnv",
-        email: "phongnv8@msb.com.vn",
-        message: "Helo phong nice to meet you",
-        phone: "098717231",
-      }),
-    });
-    const jsonData = await response.json();
-    console.log(jsonData);
-  };
 
   const onItemChange = (
     name: string,
@@ -76,20 +67,56 @@ export const ContactForm = () => {
       type: "UPDATE",
       data: { name, value, hasError, error, touched: true, isFormValid },
     });
-    console.log(formState);
+  };
+
+  const formCheckValidate = (formValue: any) => {
+    let isFormValid = true;
+    const newState: any = { ...formValue };
+    for (const key in formValue) {
+      const item = formValue[key];
+      const { hasError, error } = validateInput(key, item.value);
+      // Check if the current field has error
+      if (hasError) {
+        isFormValid = false;
+      }
+      newState[key] = { ...newState[key], hasError, error };
+    }
+    newState.isFormValid = isFormValid;
+    dispatch({
+      type: "CHECK_VALIDATION",
+      data: newState,
+    });
+    return isFormValid;
   };
 
   const onInputChange = (key: string, event: any) => {
     onItemChange(key, event.target.value, dispatch, formState);
   };
 
+  const createMessage = async () => {
+    const isFormValidate = formCheckValidate(formState);
+    if (!isFormValidate) {
+      toast.error("Please fill in all required filed!");
+      return;
+    }
+    const dataValue: ContactInfoType = {
+      name: formState.name.value,
+      email: formState.email.value,
+      phone: formState.phone.value,
+      message: formState.message.value,
+    };
+    await contactInfoCreateMessage(dataValue);
+  };
+
   return (
     <div className="right wow fadeInRight">
       <div className="rounded-lg lg:col-span-3">
-        <form className="space-y-4">
+        <div className="space-y-4">
           <div>
             <label
-              className={`sr-only ${formState.name.hasError ?? "text-red-500"}`}
+              className={`sr-only ${
+                formState.name.hasError ? "text-red-500" : ""
+              }`}
               htmlFor="name"
             >
               Name
@@ -98,7 +125,7 @@ export const ContactForm = () => {
               className={`w-full rounded-lg dark:bg-transparent  border border-solid p-4 text-sm ${
                 formState.name.hasError ? "border-red-500" : "border-gray-200"
               }`}
-              placeholder="Name"
+              placeholder="Name*"
               type="text"
               id="name"
               onChange={(event) => {
@@ -156,9 +183,11 @@ export const ContactForm = () => {
 
             <textarea
               className={`w-full rounded-lg dark:bg-transparent  border border-solid p-4 text-sm  ${
-                formState.name.hasError ? "border-red-500" : "border-gray-200"
+                formState.message.hasError
+                  ? "border-red-500"
+                  : "border-gray-200"
               }`}
-              placeholder="Message"
+              placeholder="Message*"
               rows={8}
               id="message"
               onChange={(event) => {
@@ -173,15 +202,14 @@ export const ContactForm = () => {
           </div>
 
           <div className="mt-4">
-            {/* <Button
+            <Button
               className="inline-block w-full sm:w-auto"
               onClick={createMessage}
             >
               Send Enquiry
-            </Button> */}
-            <button type="submit">Send Enquiry</button>
+            </Button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

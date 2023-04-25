@@ -1,3 +1,4 @@
+import { NextResponse } from 'next/server';
 
 export { errorHandler };
 
@@ -11,7 +12,7 @@ function errorHandler(err: any, res: any) {
 
     if (err.name === 'UnauthorizedError') {
         // jwt authentication error
-        return res.status(401).json({ message: 'Invalid Token' });
+        return NextResponse.json({ message: 'Auth required' }, { status: 401 })
     }
 
     // default to 500 server error

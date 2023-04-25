@@ -1,6 +1,8 @@
-import ProjectItem from "./ProjectItem";
-import { ProjectType } from "../../types";
-import React from "react";
+import React from 'react';
+
+import { ProjectType } from '../../types';
+import ProjectItem from './ProjectItem';
+
 const projectPreview: ProjectType[] = [
   {
     image: "/images/product-preview1.jpg",
@@ -65,7 +67,7 @@ const projectPreview: ProjectType[] = [
       "/images/project-preview1.3.png",
       "/images/project-preview1.4.png",
     ],
-    skills: ["ReactJS", "Flutter", "Javascript", "Java", "TypeScript", "Dart"],
+    skills: ["ReactJS", "Antd", "Javascript", "Java", "TypeScript"],
   },
   {
     image: "/images/project-preview2.1.png",
@@ -89,7 +91,7 @@ const projectPreview: ProjectType[] = [
       "/images/project-preview2.3.png",
       "/images/project-preview2.4.png",
     ],
-    skills: ["ReactJS", "Flutter", "Javascript", "Java", "TypeScript", "Dart"],
+    skills: [ "Flutter","Dart"],
   },
 ];
 const ProductList = () => {

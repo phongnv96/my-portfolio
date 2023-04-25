@@ -34,3 +34,14 @@
         z-index: 2;
         transition: all .3s ease;
 }
+
+.btn:disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.4;
+    border-color: gray;
+}
+.btn:disabled.fill:before {
+    opacity: 0.6;
+    background-color: gray;
+}

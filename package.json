@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
+    "@types/express-jwt": "^7.4.2",
     "@types/react-wow": "^1.0.1",
     "sass": "^1.62.0"
   }
