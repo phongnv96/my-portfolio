@@ -85,7 +85,7 @@ const Banner = () => {
               <Image
                 width={500}
                 height={650}
-                src="/images/avatar.png"
+                src="/images/avatar2.png"
                 alt="image"
                 className="max-h-[650px]"
               />
