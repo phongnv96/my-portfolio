@@ -1,6 +1,8 @@
-import Image from "next/image";
-import React from "react";
-import SkillCardList from "./SkillCardList";
+import React from 'react';
+
+import Image from 'next/image';
+
+import SkillCardList from './SkillCardList';
 
 const Skills = () => {
   return (
@@ -31,8 +33,7 @@ const Skills = () => {
           </div>
           <div className="text lg:mb-9 dark:text-gray-400 text-gray-600">
             <p>
-              Most common methods for designing websites that work well on
-              desktop is responsive and adaptive design
+            I am committed to continuously learning and improving my skills in the ever-evolving field of web development.
             </p>
           </div>
         </div>

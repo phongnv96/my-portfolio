@@ -1,5 +1,7 @@
-import { NextResponse } from "next/server";
-import { ContactInfosRepo } from "./contac-repo";
+import { NextResponse } from 'next/server';
+
+import { errorHandler } from '../error-handler';
+import { ContactInfosRepo } from './contac-repo';
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -14,13 +16,19 @@ export async function POST(request: Request) {
   return NextResponse.json({ message: "create success!" });
 }
 
-export async function GET() {
+async function getAllContacts(req: any, res: any) {
+  const data = await ContactInfosRepo.getAll();
+  return NextResponse.json(data);
+}
+
+export async function GET(req: any, res: any) {
   try {
-    const data = await ContactInfosRepo.getAll();
-    return NextResponse.json(data);
-  } catch (error) {
-    return new Response("Error get all!", {
-      status: 500,
-    });
+    // global middleware
+    // await jwtMiddleware(req, res);
+    // route handler
+    return await getAllContacts(req, res);
+  } catch (err) {
+    // global error handler
+    return errorHandler(err, res);
   }
 }

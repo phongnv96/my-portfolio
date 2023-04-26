@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Information = () => {
   return (
@@ -54,7 +54,7 @@ const Information = () => {
             <div className="short">
               <h3 className="text-[30px] py-2">Email</h3>
               <span className="text-gray-400 ">
-                <a href="#">hello@dizme.com</a>
+                <a>hello@dizme.com</a>
               </span>
             </div>
           </div>

@@ -1,14 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
-import ColorItemList from "./ColorItemList";
-import { ThemeColorSelected } from "../../constants";
-import { ThemeContext } from "../../contexts/ThemeContext";
+import { ThemeColorSelected } from '../../constants';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import ColorItemList from './ColorItemList';
 
 const ConfigArea = () => {
   const { theme, updateColor } = useContext(ThemeContext);
   return (
     <div className="fixed right-[-200px] top-1/4 flex flex-row hover:translate-x-[-200px] duration-200 transition-transform">
-      <a href="#" className=" text-primary">
+      <a className=" text-primary">
         <svg
           className="hover:rotate-90 duration-300 transition-transform"
           xmlns="http://www.w3.org/2000/svg"

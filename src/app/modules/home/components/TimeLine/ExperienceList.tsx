@@ -1,31 +1,54 @@
-import "./_style.css";
+import './_style.css';
 
-import ExperienceItem from "./ExperienceItem";
-import { ExperienceType } from "../../types";
-import React from "react";
+import React from 'react';
+
+import { ExperienceType } from '../../types';
+import ExperienceItem from './ExperienceItem';
 
 const experiencesData: ExperienceType[] = [
   {
     title: "Maritime Bank",
-    role: "Front end leader",
-    timeLine: "DEC 21",
-    durations: "December 2021 - Current",
-    descriptions:
-      "Working alongside the designer team implementing the designs, also developing custom solutions to address team necessities.",
+    role: "Front End Leader",
+    timeLine: "JAN 22 -  Current",
+    durations: "Jan 2022 - Current",
+    descriptions: (
+      <>
+        <ul className="list-disc ml-3">
+          <li>
+            As the front-end leader at MSB, I was responsible for managing a
+            team of front-end developers and guiding them in developing
+            cutting-edge user interfaces using HTML, CSS, and JavaScript
+          </li>
+          <li className="mt-2">
+            I played a key role in implementing front-end frameworks and
+            libraries, such as React, Angular, and integrating them with
+            back-end APIs or CMS platforms. I also implemented responsive
+            designs, animations, and other front-end functionalities to enhance
+            the user experience and achieve project goals.
+          </li>
+        </ul>
+      </>
+    ),
     skills: ["ReactJS", "Flutter", "Javascript", "Java", "TypeScript", "Dart"],
   },
   {
     title: "Viettel Digital",
-    role: "Front end developer",
-    timeLine: "DEC 19",
-    durations: "December 2019 - March 2020",
-    descriptions: ` Main responsibilities:
-      - Upgrade and Development old projects using new technologies.
-      - Researching and suggesting new solutions for the company.
-      - Training and support team members.
-      - Build front end projects structure.
-      - Write code base on customer required using angular 9 vs Java
-      - Testing and fix bug`,
+    role: "Web Developer",
+    timeLine: "APR 2020",
+    durations: "Apr 2020 -  May 2022",
+    descriptions: (
+      <>
+        <ul className="list-disc ml-3">
+          <li>
+            Build a front-end structure, and create an Angular library UI for
+            multiple project reuse.
+          </li>
+          <li>Upgrade and Development old projects using new technologies.</li>
+          <li>Researching and suggesting new solutions for the company.</li>
+          <li>Write code base on customer required using angular 9 vs Java.</li>
+        </ul>
+      </>
+    ),
     skills: [
       "Angular",
       "ReactJS",
@@ -34,6 +57,41 @@ const experiencesData: ExperienceType[] = [
       "TypeScript",
       "JavaSpring",
     ],
+  },
+  {
+    title: "MP Software",
+    role: "Front End Developer",
+    timeLine: "SEP 2019",
+    durations: "Sep 2019 -  Apr 2020",
+    descriptions: (
+      <>
+        <ul className="list-disc ml-3">
+          <li>System development based on customer requirements.</li>
+          <li>Development Front end of a dynamic CMS system.</li>
+          <li>Researching and suggesting new solutions for the company.</li>
+        </ul>
+      </>
+    ),
+    skills: ["Angular", "Javascript", "C#", "TypeScript"],
+  },
+  {
+    title: "FPT Software",
+    role: "Front End Developer",
+    timeLine: "MAY 2018",
+    durations: "May 2018 - Mar 2019",
+    descriptions: (
+      <>
+        <ul className="list-disc ml-3">
+          <li>
+            Write code based on customer requirements using angular 2+ vs .Net
+            core, VB .net...
+          </li>
+          <li>Codding, testing, and fixing bugs.</li>
+          <li>Training programming languages</li>
+        </ul>
+      </>
+    ),
+    skills: ["Angular", "Javascript", "C#", "TypeScript"],
   },
 ];
 
@@ -45,6 +103,6 @@ const ExperienceList = () => {
       ))}
     </div>
   );
-}
+};
 
 export default ExperienceList;

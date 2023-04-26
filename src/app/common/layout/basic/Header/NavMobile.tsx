@@ -48,7 +48,7 @@ const NavMobile = (props: NavMobileProps) => {
           </div>
 
           <div className="sticky inset-x-0 bottom-0 border-t border-gray-100">
-            <a href="#" className="flex items-center gap-2 p-4 ">
+            <a className="flex items-center gap-2 p-4 ">
               <div>
                 <p className="text-xs">
                   <strong className="block font-medium">PhongNV</strong>

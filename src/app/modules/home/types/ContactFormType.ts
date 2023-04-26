@@ -11,18 +11,19 @@ interface ContactInfoType {
   email: string;
   phone: string;
   message: string;
+  createdAt?: string;
 }
 
 type FormItemControlType<T> = Record<keyof T, FormItemType> & {
   isFormValid: boolean;
 };
 
-interface ContacInfoFormType extends FormItemControlType<ContactInfoType> {}
+interface ContactInfoFormType extends FormItemControlType<Omit<ContactInfoType, "createdAt">> {}
 
 type FormItemActionType = {
-  type: "UPDATE" | "RESET";
-  data: FormItemType & { isFormValid: boolean };
-  key: string;
+  type: "UPDATE" | "RESET" | "CHECK_VALIDATION";
+  data: any;
+  key?: string;
 };
 
-export type { ContactInfoType, FormItemActionType, ContacInfoFormType };
+export type { ContactInfoFormType, ContactInfoType, FormItemActionType };

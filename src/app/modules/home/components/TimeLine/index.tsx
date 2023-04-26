@@ -1,6 +1,8 @@
-import ExperienceList from "./ExperienceList";
-import Image from "next/image";
-import React from "react";
+import React from 'react';
+
+import Image from 'next/image';
+
+import ExperienceList from './ExperienceList';
 
 const TimeLine = () => {
   return (
@@ -34,8 +36,9 @@ const TimeLine = () => {
           </div>
           <div className="text lg:mb-9 dark:text-gray-400 text-gray-600">
             <p>
-              Most common methods for designing websites that work well on
-              desktop is responsive and adaptive design
+              Overall, my experience across different companies has allowed me
+              to gain a diverse skill set in web development, including
+              front-end and back-end technologies.
             </p>
           </div>
         </div>
@@ -43,6 +46,6 @@ const TimeLine = () => {
       </div>
     </section>
   );
-}
+};
 
 export default TimeLine;

@@ -77,7 +77,7 @@ const Header = () => {
           <div className="container mx-auto">
             <div className="flex items-center justify-between gap-4 lg:gap-10">
               <div className="flex lg:w-0 lg:flex-1">
-                <a href="#">
+                <a>
                   <span className="sr-only">Logo</span>
                   <span className="inline-block h-10 w-32 rounded-lg bg-gray-200"></span>
                 </a>

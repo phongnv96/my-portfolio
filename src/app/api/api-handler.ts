@@ -1,5 +1,5 @@
-import { errorHandler } from "./error-handler";
-import { jwtMiddleware } from "./jwt-middleware";
+import { errorHandler } from './error-handler';
+import { jwtMiddleware } from './jwt-middleware';
 
 export { apiHandler };
 
@@ -19,7 +19,7 @@ function apiHandler(handler: any) {
       await handler[method](req, res);
     } catch (err) {
       // global error handler
-      errorHandler(err, res);
+      return errorHandler(err, res);
     }
   };
 }

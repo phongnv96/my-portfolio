@@ -1,8 +1,9 @@
-import Button from "@/app/common/components/Button";
-import { ThemeContext } from "@/app/common/contexts/ThemeContext";
-import Image from "next/image";
-import React, { useContext } from "react";
-import ReactWOW from 'react-wow'
+import React, { useContext } from 'react';
+
+import Image from 'next/image';
+
+import Button from '@/app/common/components/Button';
+import { ThemeContext } from '@/app/common/contexts/ThemeContext';
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
@@ -32,19 +33,20 @@ const About = () => {
         <div className="right self-center">
           <div className="title wow fadeInUp mb-6">
             <span className="text-[20px] lg:text-[22px] text-primary font-bold mb-2">
-              I m a Designer
+              I m a developer
             </span>
             <h3 className="text-[30px] lg:text-[40px]">
-              I Can Design Anything You Want
+              I Can Develop Anything You Want
             </h3>
           </div>
           <div className="text wow fadeInUp mb-9 dark:text-gray-400 text-gray-600">
             <p>
-              Hello there! I m a web designer, and I m very passionate and
-              dedicated to my work. With 20 years experience as a professional
-              web developer, I have acquired the skills and knowledge necessary
-              to make your project a success. I enjoy every step of the design
-              process, from discussion and collaboration.
+              Hello, I`m a web developer. I`m passionate
+              about creating websites and web applications that are visually
+              appealing, user-friendly, and optimized for performance. With
+              5 years of experience in web development, I have
+              honed my skills in front-end and back-end technologies, including
+              HTML, CSS, JavaScript, and various web development frameworks.
             </p>
           </div>
           <Button>Hire Me</Button>
