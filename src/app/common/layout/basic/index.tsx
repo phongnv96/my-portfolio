@@ -1,22 +1,18 @@
 "use client";
 
-import React, {
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import React, { useContext, useEffect, useState } from "react";
 
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 
-import Loading from '@/app/common/components/Loading/loading';
+import Loading from "@/app/common/components/Loading/loading";
 
-import MouseCursor from '../../components/Mouse/MouseCursor';
-import ConfigArea from '../../components/ThemeSetting/ConfigArea';
-import { ThemeContext } from '../../contexts/ThemeContext';
-import { useBreakpoints } from '../../hooks/useBreakPoint';
-import { ThemeContextType } from '../../types/themeConfig';
-import Footer from './Footer';
-import Header from './Header/Header';
+import MouseCursor from "../../components/Mouse/MouseCursor";
+import ConfigArea from "../../components/ThemeSetting/ConfigArea";
+import { ThemeContext } from "../../contexts/ThemeContext";
+import { useBreakpoints } from "../../hooks/useBreakPoint";
+import { ThemeContextType } from "../../types/themeConfig";
+import Footer from "./Footer";
+import Header from "./Header/Header";
 
 interface Props {
   children: React.ReactNode;
@@ -49,7 +45,12 @@ const LayoutBasic = (props: Props) => {
       {isLg && <MouseCursor />}
       <ConfigArea />
       <Footer />
-      <Toaster position='top-center' />
+      <Toaster position="top-center" />
+      {/* <!-- Messenger Plugin chat Code --> */}
+      <div id="fb-root"></div>
+
+      {/* <!-- Your Plugin chat code --> */}
+      <div id="fb-customer-chat" className="fb-customerchat"></div>
     </body>
   );
 };
