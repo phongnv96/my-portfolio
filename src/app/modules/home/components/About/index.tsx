@@ -24,8 +24,8 @@ const About = () => {
             height={630}
             src={
               theme?.isDarkMode
-                ? "/images/introduce.jpeg"
-                : "/images/introduce-light.jpg"
+                ? "/images/intro-black.jpeg"
+                : "/images/intro-white.jpeg"
             }
             alt="about_me"
           />

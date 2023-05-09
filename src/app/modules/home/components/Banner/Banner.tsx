@@ -44,8 +44,7 @@ const Banner = () => {
             </div>
             <div className="text">
               <p>
-                I`m very passionate and dedicated to my work. I`m well-versed in
-                coding standards, and the latest web development trends.
+                I`m very passionate to my work and extensive knowledge of coding standards and current web development trends.
               </p>
             </div>
             <div className="button">
