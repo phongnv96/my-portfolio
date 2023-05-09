@@ -41,7 +41,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         (js as any).src =
           "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
 
-        (fjs as any).parentNode.insertBefore(js, fjs);
+        (fjs as any)?.parentNode?.insertBefore(js, fjs);
       })(document, "script", "facebook-jssdk");
     }
   }, []);
@@ -67,6 +67,37 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
         {/* <!-- Your Plugin chat code --> */}
         <div id="fb-customer-chat" className="fb-customerchat" ref={messengerRef}></div>
+
+        {/* <Script
+          id="messenger-tag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: ` var chatbox = document.getElementById('fb-customer-chat');
+            chatbox.setAttribute("page_id", "115997714821744");
+            chatbox.setAttribute("attribution", "biz_inbox");`,
+          }}
+        ></Script>
+        <Script
+          id="messenger-sdk"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: ` window.fbAsyncInit = function() {
+              FB.init({
+                xfbml            : true,
+                version          : 'v16.0'
+              });
+            };
+      
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));`,
+          }}
+        ></Script>
+        <NextScript /> */}
       </html>
     </ThemeProvider>
   );
